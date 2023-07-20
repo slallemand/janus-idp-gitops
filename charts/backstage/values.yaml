@@ -1,4 +1,4 @@
-image: quay.io/redhat-gpte/backstage:1.0.0
+image: quay.io/redhat-gpte/backstage:1.0.1
 
 app:
   baseUrl: https://backstage-backstage.apps.cluster-ctmxg.ctmxg.sandbox430.opentlc.com
@@ -28,6 +28,10 @@ catalog:
     gitlab:
       selfHosted:
         host: gitlab-gitlab.apps.cluster-br9rv.br9rv.sandbox1083.opentlc.com
+
+quay:
+  host: https://quay-p4pl8.apps.cluster-ckvl7.ckvl7.sandbox473.opentlc.com
+  token: XXX
 
 argocd:
   appLocatorMethods:
