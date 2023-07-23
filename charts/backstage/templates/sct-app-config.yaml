@@ -96,6 +96,14 @@ stringData:
               frequency: { seconds: 10 }
               # supports ISO duration, "human duration" as used in code
               timeout: { seconds: 60 }
+        ocm:
+          env:
+            kubernetesPluginRef: {{ $.Values.clusters[0].name }}
+            schedule: # optional; same options as in TaskScheduleDefinition
+              # supports cron, ISO duration, "human duration" as used in code
+              frequency: { seconds: 10 }
+              # supports ISO duration, "human duration" as used in code
+              timeout: { seconds: 60 }
 
     argocd:
       appLocatorMethods:
@@ -134,8 +142,14 @@ stringData:
     enabled:
       kubernetes: true
       techdocs: true
-      ocm: false
       argocd: true
+      sonarqube: false
+      keycloak: true
+      ocm: true
+      github: false
+      githubOrg: false
+      gitlab: true
+      jenkins: false
 kind: Secret
 metadata:
   labels:
